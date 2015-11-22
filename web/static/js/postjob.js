@@ -2,6 +2,7 @@
  * Created by mubas on 23-Aug-15.
  */
 ;(function($){
+    
     "use strict";
     $(function(){
         var movetogulf = window.movetogulf;
