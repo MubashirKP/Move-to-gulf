@@ -67,7 +67,7 @@ def listing(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
     jobs = paginator.page(paginator.num_pages)
 
-  return render(request, 'listing.html', {"jobs": jobs})
+  return render(request, 'listing.html', {"jobs": jobs,"autofill":createJson()})
 
 def search(request):
   location = Job_Location.objects.get(id=request.POST['location'])
@@ -91,4 +91,4 @@ def search(request):
   except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
     jobs = paginator.page(paginator.num_pages)
-  return render(request, 'listing.html', {"jobs": jobs})
+  return render(request, 'listing.html', {"jobs": jobs,"autofill":createJson()})
