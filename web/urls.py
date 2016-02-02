@@ -8,5 +8,6 @@ urlpatterns = [
      url(r'^search/$',views.search, name = "joblisting"),
      url(r'^aboutus/$',views.aboutus, name = "aboutus"),
      url(r'^contact/$',views.contact, name = "contact"),
-     url(r'^jobdetail/(?P<jobid>[^\/|$]+)?\/?$',views.jobdetail)
+     url(r'^jobdetail/(?P<jobid>[^\/|$]+)?\/?$',views.jobdetail),
+     url(r'^post-resume/(?P<jobid>[^\/|$]+)?\/?$',views.postresume)
 ]

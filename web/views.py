@@ -103,3 +103,7 @@ def aboutus(request):
 
 def contact(request):
   return render(request,'contact.html')
+def postresume(request,jobid):
+  job_email = Posted_Jobs.objects.get(id=jobid)
+  job_email = job_email.job_email
+  return  render(request,'post-resume.html',{"job_email":job_email})
