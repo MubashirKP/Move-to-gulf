@@ -1,1 +1,5 @@
 .idea/
+web/views.pyc
+web/urls.pyc
+web/models.pyc
+manage.pyc

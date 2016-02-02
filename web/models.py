@@ -48,6 +48,7 @@ class Posted_Jobs(models.Model):
      return self.job_title
   def get_json(self):
     return{
+      "id":self.id,
       "email" : self.job_email,
       "title": self.job_title,
       "location": self.job_location.location,
