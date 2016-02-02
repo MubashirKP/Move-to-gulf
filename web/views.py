@@ -92,3 +92,14 @@ def search(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
     jobs = paginator.page(paginator.num_pages)
   return render(request, 'listing.html', {"jobs": jobs,"autofill":createJson()})
+
+def jobdetail(request,jobid):
+  job_list = Posted_Jobs.objects.get(id=jobid)
+  job_list = job_list.get_json()
+  return render(request,'job-detail.html',{"joblist": job_list})
+
+def aboutus(request):
+  return render(request,'about.html')
+
+def contact(request):
+  return render(request,'contact.html')
