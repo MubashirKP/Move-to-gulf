@@ -166,15 +166,7 @@
 			</div><!-- Container -->
 		</div><!-- Footer -->
 	</div><!-- end main wrapper -->
-    <script>
-    ;(function() {
-            "use strict";
-
-            window.movetogulf = {};
-            movetogulf.postdata = {{ posts|safe}};
-            movetogulf.autofill = {{ autofill|safe }}
-        })();
-    </script>
+    {% block scripts %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -204,7 +196,6 @@
 	<!-- Map -->
 
 	<script src='{%static "js/job-board.js"%}'></script>
-    <script src='{%static "js/home.js"%}'></script>
-
+  {% endblock %}
   </body>
 </html>
