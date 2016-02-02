@@ -3,7 +3,6 @@
   {% block Main_block %}
     {{ block.super}}
 
-
 		<div class="job-finder"><!-- start job finder -->
 			<div class="container">
 				<h3>Job Listing</h3>
@@ -188,3 +187,17 @@
 			</div><!-- end content -->
 		</div><!-- end page content -->
   {% endblock %}
+  {% block scripts %}
+   {{ block.super }}
+
+    <script src='{%static "js/listing.js"%}'></script>
+
+      <script>
+    ;(function() {
+            "use strict";
+
+            window.movetogulf = {};
+            movetogulf.autofill = {{ autofill|safe }}
+        })();
+    </script>
+    {%  endblock %}
